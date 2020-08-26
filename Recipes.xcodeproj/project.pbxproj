@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A99A688424F712D100AE6FD0 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A688324F712D100AE6FD0 /* RecipeDetail.swift */; };
+		A99A688724F7152000AE6FD0 /* RecipeDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A688624F7152000AE6FD0 /* RecipeDetailBuilder.swift */; };
+		A99A688A24F7154700AE6FD0 /* RecipeDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A688924F7154700AE6FD0 /* RecipeDetailRouter.swift */; };
+		A99A688D24F715B300AE6FD0 /* RecipeDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A688C24F715B300AE6FD0 /* RecipeDetailInteractor.swift */; };
+		A99A689024F7168000AE6FD0 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A688F24F7168000AE6FD0 /* RecipeDetailViewController.swift */; };
+		A99A689324F716CC00AE6FD0 /* RecipeDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A689224F716CC00AE6FD0 /* RecipeDetailPresenter.swift */; };
 		A9DA8B9024F6EDA90077390A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DA8B8F24F6EDA90077390A /* AppDelegate.swift */; };
 		A9DA8B9924F6EDAC0077390A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9DA8B9824F6EDAC0077390A /* Assets.xcassets */; };
 		A9DA8B9C24F6EDAC0077390A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DA8B9A24F6EDAC0077390A /* LaunchScreen.storyboard */; };
@@ -38,6 +44,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A99A688324F712D100AE6FD0 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
+		A99A688624F7152000AE6FD0 /* RecipeDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailBuilder.swift; sourceTree = "<group>"; };
+		A99A688924F7154700AE6FD0 /* RecipeDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailRouter.swift; sourceTree = "<group>"; };
+		A99A688C24F715B300AE6FD0 /* RecipeDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailInteractor.swift; sourceTree = "<group>"; };
+		A99A688F24F7168000AE6FD0 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		A99A689224F716CC00AE6FD0 /* RecipeDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecipeDetailPresenter.swift; path = ../../../../../../RecipeDetailPresenter.swift; sourceTree = "<group>"; };
 		A9DA8B8C24F6EDA90077390A /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DA8B8F24F6EDA90077390A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9DA8B9824F6EDAC0077390A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +78,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A99A688524F7151500AE6FD0 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				A99A688624F7152000AE6FD0 /* RecipeDetailBuilder.swift */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+		A99A688824F7152500AE6FD0 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				A99A688924F7154700AE6FD0 /* RecipeDetailRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		A99A688B24F715A900AE6FD0 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				A99A688C24F715B300AE6FD0 /* RecipeDetailInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		A99A688E24F715F500AE6FD0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A99A688F24F7168000AE6FD0 /* RecipeDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A99A689124F716C100AE6FD0 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				A99A689224F716CC00AE6FD0 /* RecipeDetailPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
 		A9DA8B8324F6EDA90077390A = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +197,12 @@
 		A9DB695524F6F8610027C560 /* Recipe Detail */ = {
 			isa = PBXGroup;
 			children = (
+				A99A689124F716C100AE6FD0 /* Presenters */,
+				A99A688E24F715F500AE6FD0 /* View Controllers */,
+				A99A688B24F715A900AE6FD0 /* Interactors */,
+				A99A688824F7152500AE6FD0 /* Routers */,
+				A99A688524F7151500AE6FD0 /* Builders */,
+				A99A688324F712D100AE6FD0 /* RecipeDetail.swift */,
 			);
 			path = "Recipe Detail";
 			sourceTree = "<group>";
@@ -260,13 +318,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A99A688424F712D100AE6FD0 /* RecipeDetail.swift in Sources */,
 				A9DB695C24F6F9F80027C560 /* RecipesListViewController.swift in Sources */,
 				A9DB696224F6FF5A0027C560 /* RecipesListPresenter.swift in Sources */,
 				A9DB696424F6FFFB0027C560 /* RecipesListInteractor.swift in Sources */,
 				A9DB696624F701F70027C560 /* RecipesListBuilder.swift in Sources */,
+				A99A688D24F715B300AE6FD0 /* RecipeDetailInteractor.swift in Sources */,
 				A9DA8B9024F6EDA90077390A /* AppDelegate.swift in Sources */,
+				A99A688724F7152000AE6FD0 /* RecipeDetailBuilder.swift in Sources */,
 				A9DB696024F6FDDE0027C560 /* RecipesListRouter.swift in Sources */,
 				A9DB695E24F6FA140027C560 /* RecipesList.swift in Sources */,
+				A99A689024F7168000AE6FD0 /* RecipeDetailViewController.swift in Sources */,
+				A99A688A24F7154700AE6FD0 /* RecipeDetailRouter.swift in Sources */,
+				A99A689324F716CC00AE6FD0 /* RecipeDetailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
