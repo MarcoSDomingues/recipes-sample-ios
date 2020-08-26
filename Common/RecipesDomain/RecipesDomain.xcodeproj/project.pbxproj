@@ -46,6 +46,7 @@
 		A9DB694324F6F3D00027C560 /* RecipesDomain */ = {
 			isa = PBXGroup;
 			children = (
+				A9DB695124F6F8390027C560 /* Entities */,
 				A9DB694C24F6F3FC0027C560 /* Resources */,
 				A9DB694424F6F3D00027C560 /* RecipesDomain.h */,
 			);
@@ -58,6 +59,13 @@
 				A9DB694524F6F3D00027C560 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A9DB695124F6F8390027C560 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

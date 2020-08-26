@@ -12,15 +12,25 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private(set) var router: RecipesListRouter?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = ViewController()
-        window?.makeKeyAndVisible()
+        setupRouter()
         
         return true
     }
 
+}
+
+// MARK: - Router
+
+extension AppDelegate {
+    
+    private func setupRouter() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let builder = RecipesListBuilder()
+        self.router = builder.makeModule(with: window, navigationController: UINavigationController())
+    }
+    
 }
