@@ -7,138 +7,106 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A9DA8B9024F6EDA90077390A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DA8B8F24F6EDA90077390A /* AppDelegate.swift */; };
-		A9DA8B9424F6EDA90077390A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DA8B9324F6EDA90077390A /* ViewController.swift */; };
-		A9DA8B9924F6EDAC0077390A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9DA8B9824F6EDAC0077390A /* Assets.xcassets */; };
-		A9DA8B9C24F6EDAC0077390A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DA8B9A24F6EDAC0077390A /* LaunchScreen.storyboard */; };
-		A9DB693424F6F1AB0027C560 /* RecipesUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DB693324F6F1AB0027C560 /* RecipesUIKit.framework */; };
-		A9DB693524F6F1AB0027C560 /* RecipesUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9DB693324F6F1AB0027C560 /* RecipesUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A9DB694F24F6F4370027C560 /* RecipesDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DB694E24F6F4370027C560 /* RecipesDomain.framework */; };
-		A9DB695024F6F4370027C560 /* RecipesDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9DB694E24F6F4370027C560 /* RecipesDomain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A9DB694624F6F3D00027C560 /* RecipesDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = A9DB694424F6F3D00027C560 /* RecipesDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		A9DB693624F6F1AB0027C560 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A9DB695024F6F4370027C560 /* RecipesDomain.framework in Embed Frameworks */,
-				A9DB693524F6F1AB0027C560 /* RecipesUIKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		A9DA8B8C24F6EDA90077390A /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9DA8B8F24F6EDA90077390A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A9DA8B9324F6EDA90077390A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A9DA8B9824F6EDAC0077390A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A9DA8B9B24F6EDAC0077390A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A9DA8B9D24F6EDAC0077390A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9DB693324F6F1AB0027C560 /* RecipesUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RecipesUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9DB694E24F6F4370027C560 /* RecipesDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RecipesDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9DB694124F6F3D00027C560 /* RecipesDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecipesDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9DB694424F6F3D00027C560 /* RecipesDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecipesDomain.h; sourceTree = "<group>"; };
+		A9DB694524F6F3D00027C560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A9DA8B8924F6EDA90077390A /* Frameworks */ = {
+		A9DB693E24F6F3D00027C560 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9DB694F24F6F4370027C560 /* RecipesDomain.framework in Frameworks */,
-				A9DB693424F6F1AB0027C560 /* RecipesUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A9DA8B8324F6EDA90077390A = {
+		A9DB693724F6F3D00027C560 = {
 			isa = PBXGroup;
 			children = (
-				A9DA8B8E24F6EDA90077390A /* Recipes */,
-				A9DA8B8D24F6EDA90077390A /* Products */,
-				A9DB693224F6F1AB0027C560 /* Frameworks */,
+				A9DB694324F6F3D00027C560 /* RecipesDomain */,
+				A9DB694224F6F3D00027C560 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A9DA8B8D24F6EDA90077390A /* Products */ = {
+		A9DB694224F6F3D00027C560 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A9DA8B8C24F6EDA90077390A /* Recipes.app */,
+				A9DB694124F6F3D00027C560 /* RecipesDomain.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A9DA8B8E24F6EDA90077390A /* Recipes */ = {
+		A9DB694324F6F3D00027C560 /* RecipesDomain */ = {
 			isa = PBXGroup;
 			children = (
-				A9DA8BA324F6EEBB0077390A /* Resources */,
-				A9DA8B8F24F6EDA90077390A /* AppDelegate.swift */,
-				A9DA8B9324F6EDA90077390A /* ViewController.swift */,
+				A9DB694C24F6F3FC0027C560 /* Resources */,
+				A9DB694424F6F3D00027C560 /* RecipesDomain.h */,
 			);
-			path = Recipes;
+			path = RecipesDomain;
 			sourceTree = "<group>";
 		};
-		A9DA8BA324F6EEBB0077390A /* Resources */ = {
+		A9DB694C24F6F3FC0027C560 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A9DA8B9824F6EDAC0077390A /* Assets.xcassets */,
-				A9DA8B9A24F6EDAC0077390A /* LaunchScreen.storyboard */,
-				A9DA8B9D24F6EDAC0077390A /* Info.plist */,
+				A9DB694524F6F3D00027C560 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		A9DB693224F6F1AB0027C560 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A9DB694E24F6F4370027C560 /* RecipesDomain.framework */,
-				A9DB693324F6F1AB0027C560 /* RecipesUIKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		A9DB693C24F6F3D00027C560 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9DB694624F6F3D00027C560 /* RecipesDomain.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		A9DA8B8B24F6EDA90077390A /* Recipes */ = {
+		A9DB694024F6F3D00027C560 /* RecipesDomain */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9DA8BA024F6EDAC0077390A /* Build configuration list for PBXNativeTarget "Recipes" */;
+			buildConfigurationList = A9DB694924F6F3D00027C560 /* Build configuration list for PBXNativeTarget "RecipesDomain" */;
 			buildPhases = (
-				A9DA8B8824F6EDA90077390A /* Sources */,
-				A9DA8B8924F6EDA90077390A /* Frameworks */,
-				A9DA8B8A24F6EDA90077390A /* Resources */,
-				A9DB693624F6F1AB0027C560 /* Embed Frameworks */,
+				A9DB693C24F6F3D00027C560 /* Headers */,
+				A9DB693D24F6F3D00027C560 /* Sources */,
+				A9DB693E24F6F3D00027C560 /* Frameworks */,
+				A9DB693F24F6F3D00027C560 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Recipes;
-			productName = Recipes;
-			productReference = A9DA8B8C24F6EDA90077390A /* Recipes.app */;
-			productType = "com.apple.product-type.application";
+			name = RecipesDomain;
+			productName = RecipesDomain;
+			productReference = A9DB694124F6F3D00027C560 /* RecipesDomain.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A9DA8B8424F6EDA90077390A /* Project object */ = {
+		A9DB693824F6F3D00027C560 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Marco Domingues";
 				TargetAttributes = {
-					A9DA8B8B24F6EDA90077390A = {
+					A9DB694024F6F3D00027C560 = {
 						CreatedOnToolsVersion = 11.6;
 					};
 				};
 			};
-			buildConfigurationList = A9DA8B8724F6EDA90077390A /* Build configuration list for PBXProject "Recipes" */;
+			buildConfigurationList = A9DB693B24F6F3D00027C560 /* Build configuration list for PBXProject "RecipesDomain" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -146,53 +114,38 @@
 				en,
 				Base,
 			);
-			mainGroup = A9DA8B8324F6EDA90077390A;
-			productRefGroup = A9DA8B8D24F6EDA90077390A /* Products */;
+			mainGroup = A9DB693724F6F3D00027C560;
+			productRefGroup = A9DB694224F6F3D00027C560 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A9DA8B8B24F6EDA90077390A /* Recipes */,
+				A9DB694024F6F3D00027C560 /* RecipesDomain */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A9DA8B8A24F6EDA90077390A /* Resources */ = {
+		A9DB693F24F6F3D00027C560 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9DA8B9C24F6EDAC0077390A /* LaunchScreen.storyboard in Resources */,
-				A9DA8B9924F6EDAC0077390A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A9DA8B8824F6EDA90077390A /* Sources */ = {
+		A9DB693D24F6F3D00027C560 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9DA8B9424F6EDA90077390A /* ViewController.swift in Sources */,
-				A9DA8B9024F6EDA90077390A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		A9DA8B9A24F6EDAC0077390A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A9DA8B9B24F6EDAC0077390A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		A9DA8B9E24F6EDAC0077390A /* Debug */ = {
+		A9DB694724F6F3D00027C560 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -225,6 +178,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -249,10 +203,12 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		A9DA8B9F24F6EDAC0077390A /* Release */ = {
+		A9DB694824F6F3D00027C560 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -285,6 +241,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -303,40 +260,54 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		A9DA8BA124F6EDAC0077390A /* Debug */ = {
+		A9DB694A24F6F3D00027C560 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Recipes/Resources/Info.plist;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RecipesDomain/Resources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = md.Recipes;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = md.RecipesDomain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		A9DA8BA224F6EDAC0077390A /* Release */ = {
+		A9DB694B24F6F3D00027C560 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Recipes/Resources/Info.plist;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RecipesDomain/Resources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = md.Recipes;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = md.RecipesDomain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -345,25 +316,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A9DA8B8724F6EDA90077390A /* Build configuration list for PBXProject "Recipes" */ = {
+		A9DB693B24F6F3D00027C560 /* Build configuration list for PBXProject "RecipesDomain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A9DA8B9E24F6EDAC0077390A /* Debug */,
-				A9DA8B9F24F6EDAC0077390A /* Release */,
+				A9DB694724F6F3D00027C560 /* Debug */,
+				A9DB694824F6F3D00027C560 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9DA8BA024F6EDAC0077390A /* Build configuration list for PBXNativeTarget "Recipes" */ = {
+		A9DB694924F6F3D00027C560 /* Build configuration list for PBXNativeTarget "RecipesDomain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A9DA8BA124F6EDAC0077390A /* Debug */,
-				A9DA8BA224F6EDAC0077390A /* Release */,
+				A9DB694A24F6F3D00027C560 /* Debug */,
+				A9DB694B24F6F3D00027C560 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A9DA8B8424F6EDA90077390A /* Project object */;
+	rootObject = A9DB693824F6F3D00027C560 /* Project object */;
 }

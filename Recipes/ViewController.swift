@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RecipesUIKit
 
 class ViewController: UIViewController {
 
