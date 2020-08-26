@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A99A68A624F72B0400AE6FD0 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68A524F72B0400AE6FD0 /* Recipe.swift */; };
+		A99A68A824F72B4800AE6FD0 /* RecipeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68A724F72B4800AE6FD0 /* RecipeCategory.swift */; };
 		A9DB694624F6F3D00027C560 /* RecipesDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = A9DB694424F6F3D00027C560 /* RecipesDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A99A68A524F72B0400AE6FD0 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		A99A68A724F72B4800AE6FD0 /* RecipeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategory.swift; sourceTree = "<group>"; };
 		A9DB694124F6F3D00027C560 /* RecipesDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecipesDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DB694424F6F3D00027C560 /* RecipesDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecipesDomain.h; sourceTree = "<group>"; };
 		A9DB694524F6F3D00027C560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 		A9DB695124F6F8390027C560 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				A99A68A524F72B0400AE6FD0 /* Recipe.swift */,
+				A99A68A724F72B4800AE6FD0 /* RecipeCategory.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -111,6 +117,7 @@
 				TargetAttributes = {
 					A9DB694024F6F3D00027C560 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
@@ -147,6 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A99A68A624F72B0400AE6FD0 /* Recipe.swift in Sources */,
+				A99A68A824F72B4800AE6FD0 /* RecipeCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +285,7 @@
 		A9DB694A24F6F3D00027C560 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -292,6 +302,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = md.RecipesDomain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,6 +311,7 @@
 		A9DB694B24F6F3D00027C560 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
