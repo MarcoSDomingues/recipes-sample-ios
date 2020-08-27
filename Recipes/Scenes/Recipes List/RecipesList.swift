@@ -19,6 +19,7 @@ protocol RecipesListNavigator: class {
 // MARK: User Layer
 
 protocol RecipesListUserInterface: class {
+    func updateNavigationBarTitle(_ title: String)
 }
 
 protocol RecipesListEventHandler: class {

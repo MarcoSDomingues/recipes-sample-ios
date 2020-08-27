@@ -1,6 +1,6 @@
 //
 //  UICollectionViewCell+ReuseIdentifier.swift
-//  Recipes
+//  RecipesUIKit
 //
 //  Created by Marco Domingues on 27/08/2020.
 //  Copyright © 2020 Marco Domingues. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UICollectionViewCell {
+public extension UICollectionViewCell {
     
     class var reuseIdentifier: String {
         return String(describing: self)

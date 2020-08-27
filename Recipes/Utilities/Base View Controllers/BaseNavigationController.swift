@@ -24,6 +24,7 @@ class BaseNavigationController: UINavigationController {
     private func setupNavigationBarAppearance() {
         navigationBar.prefersLargeTitles = false
         
+        navigationBar.tintColor = .white
         navigationBar.shadowImage = UIImage()
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         

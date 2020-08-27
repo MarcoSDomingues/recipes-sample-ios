@@ -21,7 +21,7 @@ extension RecipesListPresenter: RecipesListEventHandler {
     // MARK: - RecipesListEventHandler
     
     func viewIsReady() {
-        // TODO:
+        userInterface.updateNavigationBarTitle("DISCOVERY")
     }
     
 }

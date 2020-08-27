@@ -18,7 +18,7 @@ class RecipesListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
+        view.backgroundColor = .white
         eventHandler.viewIsReady()
     }
     
@@ -27,5 +27,9 @@ class RecipesListViewController: UIViewController {
 extension RecipesListViewController: RecipesListUserInterface {
     
     // MARK: - RecipesListUserInterface
+    
+    func updateNavigationBarTitle(_ title: String) {
+        self.title = title
+    }
     
 }

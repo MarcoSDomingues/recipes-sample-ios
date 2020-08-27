@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A99A68AD24F730D900AE6FD0 /* ListContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68AA24F730D900AE6FD0 /* ListContentManager.swift */; };
+		A99A68AE24F730D900AE6FD0 /* ListContentContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68AB24F730D900AE6FD0 /* ListContentContext.swift */; };
+		A99A68AF24F730D900AE6FD0 /* ListSectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68AC24F730D900AE6FD0 /* ListSectionManager.swift */; };
+		A99A68B224F7316200AE6FD0 /* UICollectionViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68B124F7316200AE6FD0 /* UICollectionViewCell+ReuseIdentifier.swift */; };
 		A9DB692C24F6F16A0027C560 /* RecipesUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A9DB692A24F6F16A0027C560 /* RecipesUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A99A68AA24F730D900AE6FD0 /* ListContentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListContentManager.swift; sourceTree = "<group>"; };
+		A99A68AB24F730D900AE6FD0 /* ListContentContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListContentContext.swift; sourceTree = "<group>"; };
+		A99A68AC24F730D900AE6FD0 /* ListSectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSectionManager.swift; sourceTree = "<group>"; };
+		A99A68B124F7316200AE6FD0 /* UICollectionViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
 		A9DB692724F6F16A0027C560 /* RecipesUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecipesUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DB692A24F6F16A0027C560 /* RecipesUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecipesUIKit.h; sourceTree = "<group>"; };
 		A9DB692B24F6F16A0027C560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,6 +35,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A99A68A924F730D900AE6FD0 /* List Content */ = {
+			isa = PBXGroup;
+			children = (
+				A99A68AA24F730D900AE6FD0 /* ListContentManager.swift */,
+				A99A68AB24F730D900AE6FD0 /* ListContentContext.swift */,
+				A99A68AC24F730D900AE6FD0 /* ListSectionManager.swift */,
+			);
+			path = "List Content";
+			sourceTree = "<group>";
+		};
+		A99A68B024F7315D00AE6FD0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A99A68B124F7316200AE6FD0 /* UICollectionViewCell+ReuseIdentifier.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A9DB691D24F6F16A0027C560 = {
 			isa = PBXGroup;
 			children = (
@@ -46,6 +72,8 @@
 		A9DB692924F6F16A0027C560 /* RecipesUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A99A68B024F7315D00AE6FD0 /* Extensions */,
+				A99A68A924F730D900AE6FD0 /* List Content */,
 				A9DB694D24F6F4130027C560 /* Resources */,
 				A9DB692A24F6F16A0027C560 /* RecipesUIKit.h */,
 			);
@@ -139,6 +167,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A99A68B224F7316200AE6FD0 /* UICollectionViewCell+ReuseIdentifier.swift in Sources */,
+				A99A68AD24F730D900AE6FD0 /* ListContentManager.swift in Sources */,
+				A99A68AF24F730D900AE6FD0 /* ListSectionManager.swift in Sources */,
+				A99A68AE24F730D900AE6FD0 /* ListContentContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
