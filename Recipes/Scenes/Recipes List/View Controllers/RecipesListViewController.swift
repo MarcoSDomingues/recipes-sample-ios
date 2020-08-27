@@ -21,11 +21,16 @@ class RecipesListViewController: UIViewController {
     
     private var contentManager: RecipesListManager?
     
+    lazy var searchController: UISearchController = {
+        return UISearchController(searchResultsController: nil)
+    }()
+    
     // MARK: - View Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupContentManager()
+        setupSearchController()
         setupCollectionView()
         eventHandler.viewIsReady()
     }
@@ -54,6 +59,14 @@ class RecipesListViewController: UIViewController {
     private func setupContentManager() {
         contentManager = RecipesListManager(delegate: self)
         contentManager?.managedCollectionView = collectionView
+    }
+    
+    private func setupSearchController() {
+        navigationItem.searchController = searchController
+        
+        searchController.searchBar.tintColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search anything, find everything..."
     }
     
 }
