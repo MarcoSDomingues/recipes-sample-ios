@@ -16,6 +16,7 @@ struct RecipeViewModel {
     let imageName: String
     let instructions: [String]
     let categories: [RecipeCategoryViewModel]
+    let users: [UserViewModel]
     
     init(recipe: Recipe) {
         self.title = recipe.title
@@ -25,6 +26,10 @@ struct RecipeViewModel {
         
         self.categories = recipe.categories.map {
             RecipeCategoryViewModel(recipeCategory: $0)
+        }
+        
+        self.users = recipe.users.map {
+            UserViewModel(user: $0)
         }
         
     }

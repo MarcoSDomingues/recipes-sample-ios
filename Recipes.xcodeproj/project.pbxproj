@@ -24,6 +24,9 @@
 		A99A68CD24F7BA7600AE6FD0 /* LoadingIndicatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68CC24F7BA7600AE6FD0 /* LoadingIndicatorCell.swift */; };
 		A99A68CF24F7CA7C00AE6FD0 /* RecipeCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68CE24F7CA7C00AE6FD0 /* RecipeCategoryCell.swift */; };
 		A99A68D924F7EBBE00AE6FD0 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68D824F7EBBE00AE6FD0 /* RecipeDetailView.swift */; };
+		A99A68DE24F7F5BA00AE6FD0 /* RecipeRelatedUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68DD24F7F5BA00AE6FD0 /* RecipeRelatedUsersView.swift */; };
+		A99A68E024F7F75B00AE6FD0 /* RecipesUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68DF24F7F75B00AE6FD0 /* RecipesUserCell.swift */; };
+		A99A68E224F7F77C00AE6FD0 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68E124F7F77C00AE6FD0 /* UserViewModel.swift */; };
 		A9DA8B9024F6EDA90077390A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DA8B8F24F6EDA90077390A /* AppDelegate.swift */; };
 		A9DA8B9924F6EDAC0077390A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9DA8B9824F6EDAC0077390A /* Assets.xcassets */; };
 		A9DA8B9C24F6EDAC0077390A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DA8B9A24F6EDAC0077390A /* LaunchScreen.storyboard */; };
@@ -72,6 +75,9 @@
 		A99A68CC24F7BA7600AE6FD0 /* LoadingIndicatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorCell.swift; sourceTree = "<group>"; };
 		A99A68CE24F7CA7C00AE6FD0 /* RecipeCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoryCell.swift; sourceTree = "<group>"; };
 		A99A68D824F7EBBE00AE6FD0 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		A99A68DD24F7F5BA00AE6FD0 /* RecipeRelatedUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRelatedUsersView.swift; sourceTree = "<group>"; };
+		A99A68DF24F7F75B00AE6FD0 /* RecipesUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesUserCell.swift; sourceTree = "<group>"; };
+		A99A68E124F7F77C00AE6FD0 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		A9DA8B8C24F6EDA90077390A /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DA8B8F24F6EDA90077390A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9DA8B9824F6EDAC0077390A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -169,6 +175,7 @@
 			children = (
 				A99A68BD24F7359300AE6FD0 /* RecipeViewModel.swift */,
 				A99A68BF24F735EC00AE6FD0 /* RecipeCategoryViewModel.swift */,
+				A99A68E124F7F77C00AE6FD0 /* UserViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -205,6 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				A99A68D824F7EBBE00AE6FD0 /* RecipeDetailView.swift */,
+				A99A68DD24F7F5BA00AE6FD0 /* RecipeRelatedUsersView.swift */,
+				A99A68DF24F7F75B00AE6FD0 /* RecipesUserCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -437,7 +446,10 @@
 				A99A689024F7168000AE6FD0 /* RecipeDetailViewController.swift in Sources */,
 				A99A688A24F7154700AE6FD0 /* RecipeDetailRouter.swift in Sources */,
 				A99A68B924F7345C00AE6FD0 /* RecipesRepository.swift in Sources */,
+				A99A68DE24F7F5BA00AE6FD0 /* RecipeRelatedUsersView.swift in Sources */,
 				A99A68A124F726A000AE6FD0 /* BaseNavigationController.swift in Sources */,
+				A99A68E024F7F75B00AE6FD0 /* RecipesUserCell.swift in Sources */,
+				A99A68E224F7F77C00AE6FD0 /* UserViewModel.swift in Sources */,
 				A99A689324F716CC00AE6FD0 /* RecipeDetailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

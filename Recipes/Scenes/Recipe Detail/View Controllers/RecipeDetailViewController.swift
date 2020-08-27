@@ -11,6 +11,12 @@ import RecipesUIKit
 
 class RecipeDetailViewController: UIViewController {
     
+    enum Constants {
+        static let margin: CGFloat = 20
+        static let usersHeight: CGFloat = 50
+        static let buttonHeight: CGFloat = 50
+    }
+    
     // MARK: - Properties
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -36,6 +42,7 @@ class RecipeDetailViewController: UIViewController {
     
     lazy var detailView = RecipeDetailView()
     lazy var startButton = CTAButton()
+    lazy var usersView = RecipeRelatedUsersView()
     
     // MARK: - View Cycle
     
@@ -62,6 +69,7 @@ class RecipeDetailViewController: UIViewController {
     private func setupView() {
         setupImageView()
         setupOverlayView()
+        setupUsersView()
         setupStartCookingButton()
         setupDetailView()
     }
@@ -93,10 +101,11 @@ class RecipeDetailViewController: UIViewController {
     private func setupDetailView() {
         view.addSubview(detailView)
         
+        let margin = Constants.margin
         detailView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             detailView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            detailView.bottomAnchor.constraint(equalTo: startButton.topAnchor, constant: -20),
+            detailView.bottomAnchor.constraint(equalTo: startButton.topAnchor, constant: -margin),
             detailView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             detailView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
@@ -108,12 +117,27 @@ class RecipeDetailViewController: UIViewController {
         startButton.setTitle("START COOKING", for: .normal)
         startButton.addTarget(self, action: #selector(didPressStartCookingButton), for: .touchUpInside)
         
+        let margin = Constants.margin
+        
         startButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            startButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
-            startButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            startButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            startButton.heightAnchor.constraint(equalToConstant: 50)
+            startButton.bottomAnchor.constraint(equalTo: usersView.topAnchor, constant: -margin),
+            startButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
+            startButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
+            startButton.heightAnchor.constraint(equalToConstant: Constants.buttonHeight)
+        ])
+    }
+    
+    private func setupUsersView() {
+        view.addSubview(usersView)
+        
+        let margin = Constants.margin
+        usersView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            usersView.heightAnchor.constraint(equalToConstant: Constants.usersHeight),
+            usersView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            usersView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            usersView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -margin)
         ])
     }
     
@@ -140,6 +164,8 @@ extension RecipeDetailViewController: RecipeDetailUserInterface {
     func updateView(with recipe: RecipeViewModel) {
         imageView.image = UIImage(named: recipe.imageName)
         detailView.model = recipe
+        usersView.model = recipe
+        usersView.isHidden = recipe.users.isEmpty
     }
     
 }

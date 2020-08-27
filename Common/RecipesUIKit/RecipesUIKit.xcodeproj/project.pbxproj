@@ -14,6 +14,7 @@
 		A99A68D224F7CB1200AE6FD0 /* RecipeCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68D124F7CB1200AE6FD0 /* RecipeCategoryView.swift */; };
 		A99A68D424F7CE2800AE6FD0 /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68D324F7CE2800AE6FD0 /* UIColor+HexString.swift */; };
 		A99A68D624F7E6DD00AE6FD0 /* CTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68D524F7E6DD00AE6FD0 /* CTAButton.swift */; };
+		A99A68E424F7F86300AE6FD0 /* UIView+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68E324F7F86300AE6FD0 /* UIView+Rounded.swift */; };
 		A9DB692C24F6F16A0027C560 /* RecipesUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A9DB692A24F6F16A0027C560 /* RecipesUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		A99A68D124F7CB1200AE6FD0 /* RecipeCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoryView.swift; sourceTree = "<group>"; };
 		A99A68D324F7CE2800AE6FD0 /* UIColor+HexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexString.swift"; sourceTree = "<group>"; };
 		A99A68D524F7E6DD00AE6FD0 /* CTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CTAButton.swift; path = ../../../../../../CTAButton.swift; sourceTree = "<group>"; };
+		A99A68E324F7F86300AE6FD0 /* UIView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rounded.swift"; sourceTree = "<group>"; };
 		A9DB692724F6F16A0027C560 /* RecipesUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecipesUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DB692A24F6F16A0027C560 /* RecipesUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecipesUIKit.h; sourceTree = "<group>"; };
 		A9DB692B24F6F16A0027C560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				A99A68B124F7316200AE6FD0 /* UICollectionViewCell+ReuseIdentifier.swift */,
 				A99A68D324F7CE2800AE6FD0 /* UIColor+HexString.swift */,
+				A99A68E324F7F86300AE6FD0 /* UIView+Rounded.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				A99A68B224F7316200AE6FD0 /* UICollectionViewCell+ReuseIdentifier.swift in Sources */,
 				A99A68D224F7CB1200AE6FD0 /* RecipeCategoryView.swift in Sources */,
 				A99A68AD24F730D900AE6FD0 /* ListContentManager.swift in Sources */,
+				A99A68E424F7F86300AE6FD0 /* UIView+Rounded.swift in Sources */,
 				A99A68D624F7E6DD00AE6FD0 /* CTAButton.swift in Sources */,
 				A99A68AF24F730D900AE6FD0 /* ListSectionManager.swift in Sources */,
 				A99A68AE24F730D900AE6FD0 /* ListContentContext.swift in Sources */,
