@@ -29,27 +29,26 @@ final class RecipesListManager: ListContentManager {
     
     public var isLoading: Bool {
         get {
-            return false
-//            return loadingSection.isLoading
+            return loadingSection.isLoading
         } set {
-            //loadingSection.isLoading = newValue
+            loadingSection.isLoading = newValue
         }
     }
     
     private var recipesSection: RecipesSectionManager
-//    private var loadingSection: LoadingSectionManager
+    private var loadingSection: LoadingSectionManager
     
     // MARK: - Initialization
     
     init(delegate: RecipesListManagerDelegate? = nil) {
         self.delegate = delegate
         
-//        loadingSection = LoadingSectionManager()
+        loadingSection = LoadingSectionManager()
         recipesSection = RecipesSectionManager()
         
         super.init()
         
-        sections = [recipesSection]
+        sections = [recipesSection, loadingSection]
         
         recipesSection.onSelectionActionBlock = { [weak self] in
             guard let `self` = self else { return }
