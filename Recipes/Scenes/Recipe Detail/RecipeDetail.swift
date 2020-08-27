@@ -19,7 +19,7 @@ protocol RecipeDetailModuleDelegate: class {
 
 protocol RecipeDetailNavigator: class {
     func didFinish()
-    func navigateToShare()
+    func navigateToShareRecipe(_ recipe: RecipeViewModel)
 }
 
 // MARK: User Layer

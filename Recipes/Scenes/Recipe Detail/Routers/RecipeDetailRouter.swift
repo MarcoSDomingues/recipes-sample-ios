@@ -37,8 +37,15 @@ extension RecipeDetailRouter: RecipeDetailNavigator {
         delegate?.recipeDetailModuleDidFinish(self)
     }
     
-    func navigateToShare() {
-        // TODO:
+    func navigateToShareRecipe(_ recipe: RecipeViewModel) {
+        let items: [Any] = [
+            UIImage(named: recipe.imageName) as Any,
+            recipe.title,
+            recipe.description
+            ].compactMap { $0 }
+        
+        let activityViewController = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        view.present(activityViewController, animated: true, completion: nil)
     }
     
 }

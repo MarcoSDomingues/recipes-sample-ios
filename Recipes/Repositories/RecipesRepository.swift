@@ -16,7 +16,7 @@ final class RecipesRepository: RecipesRepositoryType {
     init() {
         self.recipes = [
             Recipe(title: "Carrot Cake",
-                   description: "",
+                   description: "Awesome Carrot Cake!",
                    imageName: "carrot-cake",
                    instructions: ["35 min", "Ingredients serve 6"],
                    categories: [
@@ -29,7 +29,7 @@ final class RecipesRepository: RecipesRepositoryType {
             ),
             
             Recipe(title: "Cherry Icecream",
-                   description: "",
+                   description: "Awesome Cherry Icecream!",
                    imageName: "cherry-icecream",
                    instructions: ["20 min", "Ingredients serve 3"],
                    categories: [
@@ -42,7 +42,7 @@ final class RecipesRepository: RecipesRepositoryType {
             ),
             
             Recipe(title: "Lava Chocolate Cake",
-                   description: "",
+                   description: "Awesome Lava Chocolate Cake!",
                    imageName: "chocolate-lava-cake",
                    instructions: ["45 min", "Ingredients serve 4"],
                    categories: [
@@ -55,7 +55,7 @@ final class RecipesRepository: RecipesRepositoryType {
             ),
             
             Recipe(title: "Triple Chocolate Cake",
-                   description: "",
+                   description: "Awesome Triple Chocolate Cake!",
                    imageName: "triple-choco-cake",
                    instructions: ["50 min", "Ingredients serve 3"],
                    categories: [

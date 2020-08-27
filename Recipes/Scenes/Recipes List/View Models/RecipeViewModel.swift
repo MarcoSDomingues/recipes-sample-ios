@@ -12,11 +12,13 @@ import RecipesDomain
 struct RecipeViewModel {
     
     let title: String
+    let description: String
     let imageName: String
     let categories: [RecipeCategoryViewModel]
     
     init(recipe: Recipe) {
         self.title = recipe.title
+        self.description = recipe.description
         self.imageName = recipe.imageName
         
         self.categories = recipe.categories.map {
