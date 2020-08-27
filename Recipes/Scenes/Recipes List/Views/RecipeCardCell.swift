@@ -12,6 +12,7 @@ class RecipeCardCell: UICollectionViewCell {
     
     enum Constants {
         static let spacing: CGFloat = 10.0
+        static let categoriesHeight: CGFloat = 30.0
         static let margins = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     }
     
@@ -68,6 +69,13 @@ class RecipeCardCell: UICollectionViewCell {
         return lbl
     }()
     
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        return UICollectionView(frame: .zero, collectionViewLayout: layout)
+    }()
+    
     // MARK: - Initialization
     
     override init(frame: CGRect) {
@@ -87,7 +95,9 @@ class RecipeCardCell: UICollectionViewCell {
         addSubview(containerStackView)
         containerStackView.addArrangedSubview(stackView)
         stackView.addArrangedSubview(titleLabel)
+        stackView.addArrangedSubview(collectionView)
         
+        setupCollectionView()
         setupConstraints()
     }
     
@@ -116,6 +126,21 @@ class RecipeCardCell: UICollectionViewCell {
             overlayView.leadingAnchor.constraint(equalTo: leadingAnchor),
             overlayView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
+        
+        let height = Constants.categoriesHeight
+        collectionView.heightAnchor.constraint(equalToConstant: height).isActive = true
+    }
+    
+    // MARK: - Setup
+    
+    private func setupCollectionView() {
+        collectionView.backgroundColor = .clear
+        collectionView.showsHorizontalScrollIndicator = false
+        
+        RecipeCategoryCell.register(in: collectionView)
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
     
     // MARK: - Bindings
@@ -123,6 +148,31 @@ class RecipeCardCell: UICollectionViewCell {
     private func bindViewModel(_ viewModel: RecipeViewModel) {
         titleLabel.text = viewModel.title
         imageView.image = UIImage(named: viewModel.imageName)
+        
+        collectionView.reloadData()
+    }
+    
+}
+
+extension RecipeCardCell: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return model?.categories.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = RecipeCategoryCell.dequeue(from: collectionView, for: indexPath)
+        cell.model = model?.categories[indexPath.item]
+        return cell
+    }
+    
+}
+
+extension RecipeCardCell: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // Dynamic width
+        return CGSize(width: 50, height: collectionView.bounds.height)
     }
     
 }
