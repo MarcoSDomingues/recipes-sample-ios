@@ -22,6 +22,9 @@ final class RecipesRepository: RecipesRepositoryType {
                    categories: [
                     RecipeCategory(title: "DESSERTS", hexColor: "#FF6379"),
                     RecipeCategory(title: "DINNER", hexColor: "#FA8E5F")
+                ],
+                   users: [
+                    User(name: "Cristina", info: "Loves screaming", imageName: "cristina-photo", categories: [RecipeCategory(title: "DESSERTS", hexColor: "#FF6379")])
                 ]
             ),
             
@@ -44,7 +47,12 @@ final class RecipesRepository: RecipesRepositoryType {
                        RecipeCategory(title: "DESSERTS", hexColor: "#FF6379"),
                        RecipeCategory(title: "DINNER", hexColor: "#FA8E5F"),
                        RecipeCategory(title: "CHOCOLATE", hexColor: "#FE3D38")
-                   ]
+                   ],
+                   users: [
+                    User(name: "Cristina", info: "Loves screaming", imageName: "cristina-photo", categories: [RecipeCategory(title: "DESSERTS", hexColor: "#FF6379")]),
+                    
+                    User(name: "Marcelo", info: "Loves selfies", imageName: "marcelo-photo", categories: [RecipeCategory(title: "DINNER", hexColor: "#FA8E5F")])
+                ]
             ),
             
             Recipe(title: "Triple Chocolate Cake",

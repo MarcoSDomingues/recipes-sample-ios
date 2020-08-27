@@ -10,6 +10,7 @@
 		A99A68A624F72B0400AE6FD0 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68A524F72B0400AE6FD0 /* Recipe.swift */; };
 		A99A68A824F72B4800AE6FD0 /* RecipeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68A724F72B4800AE6FD0 /* RecipeCategory.swift */; };
 		A99A68B524F7339400AE6FD0 /* RecipesRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68B424F7339400AE6FD0 /* RecipesRepositoryType.swift */; };
+		A99A68DC24F7F3AA00AE6FD0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68DB24F7F3AA00AE6FD0 /* User.swift */; };
 		A9DB694624F6F3D00027C560 /* RecipesDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = A9DB694424F6F3D00027C560 /* RecipesDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -17,6 +18,7 @@
 		A99A68A524F72B0400AE6FD0 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		A99A68A724F72B4800AE6FD0 /* RecipeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategory.swift; sourceTree = "<group>"; };
 		A99A68B424F7339400AE6FD0 /* RecipesRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesRepositoryType.swift; sourceTree = "<group>"; };
+		A99A68DB24F7F3AA00AE6FD0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A9DB694124F6F3D00027C560 /* RecipesDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecipesDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DB694424F6F3D00027C560 /* RecipesDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecipesDomain.h; sourceTree = "<group>"; };
 		A9DB694524F6F3D00027C560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				A99A68A524F72B0400AE6FD0 /* Recipe.swift */,
 				A99A68A724F72B4800AE6FD0 /* RecipeCategory.swift */,
+				A99A68DB24F7F3AA00AE6FD0 /* User.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A99A68DC24F7F3AA00AE6FD0 /* User.swift in Sources */,
 				A99A68A624F72B0400AE6FD0 /* Recipe.swift in Sources */,
 				A99A68B524F7339400AE6FD0 /* RecipesRepositoryType.swift in Sources */,
 				A99A68A824F72B4800AE6FD0 /* RecipeCategory.swift in Sources */,
