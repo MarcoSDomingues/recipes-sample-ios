@@ -8,21 +8,30 @@
 
 import Foundation
 
+protocol RecipeDetailModule: class {
+}
+
 protocol RecipeDetailModuleDelegate: class {
+    func recipeDetailModuleDidFinish(_ module: RecipeDetailModule)
 }
 
 // MARK: Navigation Layer
 
 protocol RecipeDetailNavigator: class {
+    func didFinish()
+    func navigateToShare()
 }
 
 // MARK: User Layer
 
 protocol RecipeDetailUserInterface: class {
+    func updateView(with recipe: RecipeViewModel)
 }
 
 protocol RecipeDetailEventHandler: class {
     func viewIsReady()
+    func viewDidTapCloseButton()
+    func viewDidTapShareButton()
 }
 
 // MARK: Business Layer

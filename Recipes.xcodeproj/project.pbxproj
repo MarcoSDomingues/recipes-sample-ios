@@ -283,11 +283,11 @@
 		A9DB695524F6F8610027C560 /* Recipe Detail */ = {
 			isa = PBXGroup;
 			children = (
+				A99A688524F7151500AE6FD0 /* Builders */,
+				A99A688824F7152500AE6FD0 /* Routers */,
+				A99A688B24F715A900AE6FD0 /* Interactors */,
 				A99A689124F716C100AE6FD0 /* Presenters */,
 				A99A688E24F715F500AE6FD0 /* View Controllers */,
-				A99A688B24F715A900AE6FD0 /* Interactors */,
-				A99A688824F7152500AE6FD0 /* Routers */,
-				A99A688524F7151500AE6FD0 /* Builders */,
 				A99A688324F712D100AE6FD0 /* RecipeDetail.swift */,
 			);
 			path = "Recipe Detail";

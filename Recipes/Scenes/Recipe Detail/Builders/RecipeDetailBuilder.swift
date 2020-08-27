@@ -27,6 +27,7 @@ class RecipeDetailBuilder {
             navigationController: navigationController)
         
         connect(view: view, interactor: interactor, presenter: presenter, router: router)
+        configure(view: view, navigationController: navigationController, presenter: presenter)
         
         return router
     }
@@ -56,6 +57,12 @@ class RecipeDetailBuilder {
         presenter.businessInteractor = interactor
         view.eventHandler = presenter
         interactor.businessPresenter = presenter
+    }
+    
+    private func configure(view: RecipeDetailViewController, navigationController: UINavigationController?, presenter: RecipeDetailPresenter) {
+        view.modalPresentationStyle = .fullScreen
+        navigationController?.modalPresentationStyle = .fullScreen
+        presenter.configure(with: recipe)
     }
     
 }

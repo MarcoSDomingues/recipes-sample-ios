@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecipeDetailRouter {
+class RecipeDetailRouter: RecipeDetailModule {
     
     let view: RecipeDetailViewController
     let interactor: RecipeDetailInteractor
@@ -16,11 +16,15 @@ class RecipeDetailRouter {
     
     var navigationController: UINavigationController?
     
+    weak var delegate: RecipeDetailModuleDelegate?
+    
     init(view: RecipeDetailViewController, interactor: RecipeDetailInteractor, presenter: RecipeDetailPresenter, navigationController: UINavigationController? = nil) {
         self.view = view
         self.interactor = interactor
         self.presenter = presenter
         self.navigationController = navigationController
+        
+        navigationController?.pushViewController(view, animated: true)
     }
     
 }
@@ -28,5 +32,13 @@ class RecipeDetailRouter {
 extension RecipeDetailRouter: RecipeDetailNavigator {
     
     // MARK: - RecipeDetailNavigator
+    
+    func didFinish() {
+        delegate?.recipeDetailModuleDidFinish(self)
+    }
+    
+    func navigateToShare() {
+        // TODO:
+    }
     
 }

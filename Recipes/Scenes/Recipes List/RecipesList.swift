@@ -9,6 +9,9 @@
 import Foundation
 import RecipesDomain
 
+protocol RecipesListModule: class {
+}
+
 protocol RecipesListModuleDelegate: class {
 }
 
