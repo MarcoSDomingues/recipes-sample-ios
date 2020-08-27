@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RecipesDomain
 
 class RecipesListPresenter {
     
@@ -22,6 +23,9 @@ extension RecipesListPresenter: RecipesListEventHandler {
     
     func viewIsReady() {
         userInterface.updateNavigationBarTitle("DISCOVERY")
+        
+        userInterface.isLoading(true)
+        businessInteractor.fetchRecipes()
     }
     
 }
@@ -29,5 +33,17 @@ extension RecipesListPresenter: RecipesListEventHandler {
 extension RecipesListPresenter: RecipesListBusinessPresenter {
     
     // MARK: - RecipesListBusinessPresenter
+    
+    func didFetchRecipes(_ recipes: [Recipe]) {
+        userInterface.isLoading(false)
+        
+        let recipes = recipes.map { RecipeViewModel(recipe: $0) }
+        userInterface.updateRecipes(recipes)
+    }
+    
+    func didFailToFetchRecipes(with error: Error) {
+        userInterface.isLoading(false)
+        navigator.showError(error)
+    }
     
 }

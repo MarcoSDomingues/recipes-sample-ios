@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RecipesDomain
 
 protocol RecipesListModuleDelegate: class {
 }
@@ -14,12 +15,15 @@ protocol RecipesListModuleDelegate: class {
 // MARK: Navigation Layer
 
 protocol RecipesListNavigator: class {
+    func showError(_ error: Error)
 }
 
 // MARK: User Layer
 
 protocol RecipesListUserInterface: class {
+    func isLoading(_ isLoading: Bool)
     func updateNavigationBarTitle(_ title: String)
+    func updateRecipes(_ recipes: [RecipeViewModel])
 }
 
 protocol RecipesListEventHandler: class {
@@ -29,7 +33,10 @@ protocol RecipesListEventHandler: class {
 // MARK: Business Layer
 
 protocol RecipesListBusinessInteractor: class {
+    func fetchRecipes()
 }
 
 protocol RecipesListBusinessPresenter: class {
+    func didFetchRecipes(_ recipes: [Recipe])
+    func didFailToFetchRecipes(with error: Error)
 }

@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import RecipesDomain
 
 class RecipesListBuilder {
+    
+    let repository: RecipesRepositoryType
+    
+    init(repository: RecipesRepositoryType = RecipesRepository()) {
+        self.repository = repository
+    }
     
     func makeModule(with window: UIWindow?, navigationController: UINavigationController? = nil) -> RecipesListRouter {
         let view = makeView()
@@ -33,7 +40,7 @@ class RecipesListBuilder {
     }
     
     private func makeInteractor() -> RecipesListInteractor {
-        RecipesListInteractor()
+        RecipesListInteractor(repository: repository)
     }
     
     private func makePresenter() -> RecipesListPresenter {

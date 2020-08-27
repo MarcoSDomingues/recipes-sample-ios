@@ -7,14 +7,32 @@
 //
 
 import Foundation
+import RecipesDomain
 
 class RecipesListInteractor {
     
+    let repository: RecipesRepositoryType
     weak var businessPresenter: RecipesListBusinessPresenter!
+    
+    init(repository: RecipesRepositoryType) {
+        self.repository = repository
+    }
     
 }
 
 extension RecipesListInteractor: RecipesListBusinessInteractor {
-    
+
     // MARK: - RecipesListBusinessInteractor
+    
+    func fetchRecipes() {
+        repository.fetchRecipes { [weak self] result in
+            switch result {
+            case .success(let recipes):
+                self?.businessPresenter.didFetchRecipes(recipes)
+            case .failure(let error):
+                self?.businessPresenter.didFailToFetchRecipes(with: error)
+            }
+        }
+    }
+    
 }

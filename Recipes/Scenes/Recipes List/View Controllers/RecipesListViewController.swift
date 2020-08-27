@@ -32,4 +32,12 @@ extension RecipesListViewController: RecipesListUserInterface {
         self.title = title
     }
     
+    func isLoading(_ isLoading: Bool) {
+        // TODO: Implement
+    }
+    
+    func updateRecipes(_ recipes: [RecipeViewModel]) {
+        // TODO: Implement
+    }
+    
 }

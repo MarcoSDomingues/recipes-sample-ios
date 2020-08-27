@@ -28,7 +28,18 @@ class RecipesListRouter {
 }
 
 extension RecipesListRouter: RecipesListNavigator {
-    
+
     // MARK: - RecipesListNavigator
+    
+    func showError(_ error: Error) {
+        let vc = UIAlertController(title: "Error",
+                                   message: error.localizedDescription,
+                                   preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: .default)
+        vc.addAction(okAction)
+        
+        view.present(vc, animated: true)
+    }
     
 }
