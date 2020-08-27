@@ -11,33 +11,65 @@ import RecipesDomain
 
 final class RecipesRepository: RecipesRepositoryType {
     
-    func fetchRecipes(_ completion: @escaping (Result<[Recipe], Error>) -> Void) {
-        let recipes = [
-            Recipe(title: "",
+    private var recipes: [Recipe]
+    
+    init() {
+        self.recipes = [
+            Recipe(title: "Carrot Cake",
                    description: "",
-                   imageName: "",
-                   instructions: [],
-                   categories: []),
+                   imageName: "carrot-cake",
+                   instructions: ["35 min", "Ingredients serve 6"],
+                   categories: [
+                    RecipeCategory(title: "DESSERTS", hexColor: "#FF6379"),
+                    RecipeCategory(title: "FRAPPE", hexColor: "#64B2FA"),
+                    RecipeCategory(title: "SNACK", hexColor: "#46D6DE"),
+                    RecipeCategory(title: "DINNER", hexColor: "#FA8E5F"),
+                    RecipeCategory(title: "CHOCOLATE", hexColor: "#FE3D38")
+                ]
+            ),
             
-            Recipe(title: "",
+            Recipe(title: "Cherry Icecream",
                    description: "",
-                   imageName: "",
-                   instructions: [],
-                   categories: []),
+                   imageName: "cherry-icecream",
+                   instructions: ["20 min", "Ingredients serve 3"],
+                   categories: [
+                       RecipeCategory(title: "DESSERTS", hexColor: "#FF6379"),
+                       RecipeCategory(title: "FRAPPE", hexColor: "#64B2FA"),
+                       RecipeCategory(title: "SNACK", hexColor: "#46D6DE"),
+                       RecipeCategory(title: "DINNER", hexColor: "#FA8E5F"),
+                       RecipeCategory(title: "CHOCOLATE", hexColor: "#FE3D38")
+                   ]
+            ),
             
-            Recipe(title: "",
+            Recipe(title: "Lava Chocolate Cake",
                    description: "",
-                   imageName: "",
-                   instructions: [],
-                   categories: []),
+                   imageName: "chocolate-lava-cake",
+                   instructions: ["45 min", "Ingredients serve 4"],
+                   categories: [
+                       RecipeCategory(title: "DESSERTS", hexColor: "#FF6379"),
+                       RecipeCategory(title: "FRAPPE", hexColor: "#64B2FA"),
+                       RecipeCategory(title: "SNACK", hexColor: "#46D6DE"),
+                       RecipeCategory(title: "DINNER", hexColor: "#FA8E5F"),
+                       RecipeCategory(title: "CHOCOLATE", hexColor: "#FE3D38")
+                   ]
+            ),
             
-            Recipe(title: "",
+            Recipe(title: "Triple Chocolate Cake",
                    description: "",
-                   imageName: "",
-                   instructions: [],
-                   categories: []),
+                   imageName: "triple-choco-cake",
+                   instructions: ["50 min", "Ingredients serve 3"],
+                   categories: [
+                    RecipeCategory(title: "DESSERTS", hexColor: "#FF6379"),
+                    RecipeCategory(title: "FRAPPE", hexColor: "#64B2FA"),
+                    RecipeCategory(title: "SNACK", hexColor: "#46D6DE"),
+                    RecipeCategory(title: "DINNER", hexColor: "#FA8E5F"),
+                    RecipeCategory(title: "CHOCOLATE", hexColor: "#FE3D38")
+                ]
+            ),
         ]
-        
+    }
+    
+    func fetchRecipes(_ completion: @escaping (Result<[Recipe], Error>) -> Void) {
         completion(.success(recipes))
     }
     
