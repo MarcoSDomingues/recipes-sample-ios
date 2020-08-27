@@ -19,6 +19,7 @@ protocol RecipeDetailModuleDelegate: class {
 
 protocol RecipeDetailNavigator: class {
     func didFinish()
+    func navigateToStartCooking()
     func navigateToShareRecipe(_ recipe: RecipeViewModel)
 }
 
@@ -32,6 +33,7 @@ protocol RecipeDetailEventHandler: class {
     func viewIsReady()
     func viewDidTapCloseButton()
     func viewDidTapShareButton()
+    func viewDidPressStartCooking()
 }
 
 // MARK: Business Layer

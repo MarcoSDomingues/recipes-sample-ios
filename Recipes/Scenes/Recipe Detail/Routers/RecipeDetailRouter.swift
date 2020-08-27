@@ -38,14 +38,24 @@ extension RecipeDetailRouter: RecipeDetailNavigator {
     }
     
     func navigateToShareRecipe(_ recipe: RecipeViewModel) {
-        let items: [Any] = [
-            UIImage(named: recipe.imageName) as Any,
-            recipe.title,
-            recipe.description
-            ].compactMap { $0 }
+        var items: [Any] = [recipe.title, recipe.description]
+        
+        if let image = UIImage(named: recipe.imageName) {
+            items.append(image)
+        }
         
         let activityViewController = UIActivityViewController(activityItems: items, applicationActivities: nil)
         view.present(activityViewController, animated: true, completion: nil)
+    }
+    
+    func navigateToStartCooking() {
+        let vc = UIAlertController(title: "Cooking", message: "This recipe is being cooked! Wait a minute :)", preferredStyle: .alert)
+        
+        let okButton = UIAlertAction(title: "Ok", style: .default)
+        
+        vc.addAction(okButton)
+        
+        view.present(vc, animated: true)
     }
     
 }

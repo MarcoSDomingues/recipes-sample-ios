@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RecipesUIKit
 
 class RecipeDetailViewController: UIViewController {
     
@@ -33,6 +34,9 @@ class RecipeDetailViewController: UIViewController {
         return view
     }()
     
+    lazy var detailView = RecipeDetailView()
+    lazy var startButton = CTAButton()
+    
     // MARK: - View Cycle
     
     override func viewDidLoad() {
@@ -58,6 +62,8 @@ class RecipeDetailViewController: UIViewController {
     private func setupView() {
         setupImageView()
         setupOverlayView()
+        setupStartCookingButton()
+        setupDetailView()
     }
     
     private func setupImageView() {
@@ -84,6 +90,33 @@ class RecipeDetailViewController: UIViewController {
         ])
     }
     
+    private func setupDetailView() {
+        view.addSubview(detailView)
+        
+        detailView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            detailView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            detailView.bottomAnchor.constraint(equalTo: startButton.topAnchor, constant: -20),
+            detailView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            detailView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+    }
+    
+    private func setupStartCookingButton() {
+        view.addSubview(startButton)
+        
+        startButton.setTitle("START COOKING", for: .normal)
+        startButton.addTarget(self, action: #selector(didPressStartCookingButton), for: .touchUpInside)
+        
+        startButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            startButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            startButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            startButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            startButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+    
     // MARK: Actions
     
     @objc private func didPressCloseButton() {
@@ -94,6 +127,10 @@ class RecipeDetailViewController: UIViewController {
         eventHandler.viewDidTapShareButton()
     }
     
+    @objc private func didPressStartCookingButton() {
+        eventHandler.viewDidPressStartCooking()
+    }
+    
 }
 
 extension RecipeDetailViewController: RecipeDetailUserInterface {
@@ -102,6 +139,7 @@ extension RecipeDetailViewController: RecipeDetailUserInterface {
     
     func updateView(with recipe: RecipeViewModel) {
         imageView.image = UIImage(named: recipe.imageName)
+        detailView.model = recipe
     }
     
 }

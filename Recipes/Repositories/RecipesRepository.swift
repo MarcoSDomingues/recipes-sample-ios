@@ -18,37 +18,30 @@ final class RecipesRepository: RecipesRepositoryType {
             Recipe(title: "Carrot Cake",
                    description: "Awesome Carrot Cake!",
                    imageName: "carrot-cake",
-                   instructions: ["35 min", "Ingredients serve 6"],
+                   instructions: ["• 35 min", "• Ingredients serve 6"],
                    categories: [
                     RecipeCategory(title: "DESSERTS", hexColor: "#FF6379"),
-                    RecipeCategory(title: "FRAPPE", hexColor: "#64B2FA"),
-                    RecipeCategory(title: "SNACK", hexColor: "#46D6DE"),
-                    RecipeCategory(title: "DINNER", hexColor: "#FA8E5F"),
-                    RecipeCategory(title: "CHOCOLATE", hexColor: "#FE3D38")
+                    RecipeCategory(title: "DINNER", hexColor: "#FA8E5F")
                 ]
             ),
             
             Recipe(title: "Cherry Icecream",
                    description: "Awesome Cherry Icecream!",
                    imageName: "cherry-icecream",
-                   instructions: ["20 min", "Ingredients serve 3"],
+                   instructions: ["• 20 min", "• Ingredients serve 3"],
                    categories: [
                        RecipeCategory(title: "DESSERTS", hexColor: "#FF6379"),
                        RecipeCategory(title: "FRAPPE", hexColor: "#64B2FA"),
-                       RecipeCategory(title: "SNACK", hexColor: "#46D6DE"),
-                       RecipeCategory(title: "DINNER", hexColor: "#FA8E5F"),
-                       RecipeCategory(title: "CHOCOLATE", hexColor: "#FE3D38")
+                       RecipeCategory(title: "SNACK", hexColor: "#46D6DE")
                    ]
             ),
             
             Recipe(title: "Lava Chocolate Cake",
                    description: "Awesome Lava Chocolate Cake!",
                    imageName: "chocolate-lava-cake",
-                   instructions: ["45 min", "Ingredients serve 4"],
+                   instructions: ["• 45 min", "• Ingredients serve 4"],
                    categories: [
                        RecipeCategory(title: "DESSERTS", hexColor: "#FF6379"),
-                       RecipeCategory(title: "FRAPPE", hexColor: "#64B2FA"),
-                       RecipeCategory(title: "SNACK", hexColor: "#46D6DE"),
                        RecipeCategory(title: "DINNER", hexColor: "#FA8E5F"),
                        RecipeCategory(title: "CHOCOLATE", hexColor: "#FE3D38")
                    ]
@@ -57,11 +50,10 @@ final class RecipesRepository: RecipesRepositoryType {
             Recipe(title: "Triple Chocolate Cake",
                    description: "Awesome Triple Chocolate Cake!",
                    imageName: "triple-choco-cake",
-                   instructions: ["50 min", "Ingredients serve 3"],
+                   instructions: ["• 50 min", "• Ingredients serve 3"],
                    categories: [
                     RecipeCategory(title: "DESSERTS", hexColor: "#FF6379"),
                     RecipeCategory(title: "FRAPPE", hexColor: "#64B2FA"),
-                    RecipeCategory(title: "SNACK", hexColor: "#46D6DE"),
                     RecipeCategory(title: "DINNER", hexColor: "#FA8E5F"),
                     RecipeCategory(title: "CHOCOLATE", hexColor: "#FE3D38")
                 ]
