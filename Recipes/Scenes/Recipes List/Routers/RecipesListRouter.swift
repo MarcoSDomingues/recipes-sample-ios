@@ -15,6 +15,7 @@ class RecipesListRouter {
     let presenter: RecipesListPresenter
     
     var navigationController: UINavigationController?
+    private(set) var detailRouter: RecipeDetailRouter?
     
     init(view: RecipesListViewController, interactor: RecipesListInteractor, presenter: RecipesListPresenter, navigationController: UINavigationController? = nil) {
         self.view = view
@@ -40,6 +41,13 @@ extension RecipesListRouter: RecipesListNavigator {
         vc.addAction(okAction)
         
         view.present(vc, animated: true)
+    }
+    
+    func navigateToRecipeDetail(with recipe: RecipeViewModel) {
+        let builder = RecipeDetailBuilder(recipe: recipe)
+        let router = builder.makeModule(with: navigationController)
+        self.detailRouter = router
+        navigationController?.pushViewController(router.view, animated: true)
     }
     
 }

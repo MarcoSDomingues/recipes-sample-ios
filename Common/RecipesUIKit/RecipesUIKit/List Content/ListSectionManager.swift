@@ -27,7 +27,7 @@ public protocol ListSectionManager: class {
 
 // MARK: - Defaults
 
-extension ListSectionManager {
+public extension ListSectionManager {
     func didSelectItemAt(_ index: Int) {}
     func didDeselectItemAt(_ index: Int) {}
 }

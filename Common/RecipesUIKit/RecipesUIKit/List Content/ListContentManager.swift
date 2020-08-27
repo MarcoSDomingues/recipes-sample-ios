@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ListContentManager: NSObject {
+open class ListContentManager: NSObject {
     
     // MARK: - Properties
     

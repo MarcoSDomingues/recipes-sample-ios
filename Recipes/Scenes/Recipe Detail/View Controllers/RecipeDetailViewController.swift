@@ -8,11 +8,28 @@
 
 import UIKit
 
-class RecipeDetailViewController {
+class RecipeDetailViewController: UIViewController {
     
     // MARK: - Properties
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     weak var eventHandler: RecipeDetailEventHandler!
+    
+    // MARK: View Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .orange
+        eventHandler.viewIsReady()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    }
     
 }
 

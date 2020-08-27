@@ -14,12 +14,46 @@ class RecipesListViewController: UIViewController {
     
     weak var eventHandler: RecipesListEventHandler!
     
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        return UICollectionView(frame: .zero, collectionViewLayout: layout)
+    }()
+    
+    private var contentManager: RecipesListManager?
+    
     // MARK: - View Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        setupContentManager()
+        setupCollectionView()
         eventHandler.viewIsReady()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+    }
+    
+    // MARK: - Setup
+    
+    private func setupCollectionView() {
+        view.addSubview(collectionView)
+        collectionView.backgroundColor = .white
+        collectionView.keyboardDismissMode = .onDrag
+        
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+    }
+    
+    private func setupContentManager() {
+        contentManager = RecipesListManager(delegate: self)
+        contentManager?.managedCollectionView = collectionView
     }
     
 }
@@ -33,11 +67,19 @@ extension RecipesListViewController: RecipesListUserInterface {
     }
     
     func isLoading(_ isLoading: Bool) {
-        // TODO: Implement
+        contentManager?.isLoading = isLoading
     }
     
     func updateRecipes(_ recipes: [RecipeViewModel]) {
-        // TODO: Implement
+        contentManager?.recipes = recipes
+    }
+    
+}
+
+extension RecipesListViewController: RecipesListManagerDelegate {
+    
+    func recipesListManager(_ listManager: RecipesListManager, didSelect recipe: RecipeViewModel) {
+        eventHandler.viewDidSelectRecipe(recipe)
     }
     
 }

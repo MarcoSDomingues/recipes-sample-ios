@@ -10,6 +10,12 @@ import UIKit
 
 class RecipeDetailBuilder {
     
+    let recipe: RecipeViewModel
+    
+    init(recipe: RecipeViewModel) {
+        self.recipe = recipe
+    }
+    
     func makeModule(with navigationController: UINavigationController?) -> RecipeDetailRouter {
         let view = makeView()
         let interactor = makeInteractor()

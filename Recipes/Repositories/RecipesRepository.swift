@@ -30,6 +30,12 @@ final class RecipesRepository: RecipesRepositoryType {
                    imageName: "",
                    instructions: [],
                    categories: []),
+            
+            Recipe(title: "",
+                   description: "",
+                   imageName: "",
+                   instructions: [],
+                   categories: []),
         ]
         
         completion(.success(recipes))

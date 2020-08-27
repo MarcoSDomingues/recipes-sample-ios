@@ -16,6 +16,7 @@ protocol RecipesListModuleDelegate: class {
 
 protocol RecipesListNavigator: class {
     func showError(_ error: Error)
+    func navigateToRecipeDetail(with recipe: RecipeViewModel)
 }
 
 // MARK: User Layer
@@ -28,6 +29,7 @@ protocol RecipesListUserInterface: class {
 
 protocol RecipesListEventHandler: class {
     func viewIsReady()
+    func viewDidSelectRecipe(_ recipe: RecipeViewModel)
 }
 
 // MARK: Business Layer

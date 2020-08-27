@@ -28,6 +28,10 @@ extension RecipesListPresenter: RecipesListEventHandler {
         businessInteractor.fetchRecipes()
     }
     
+    func viewDidSelectRecipe(_ recipe: RecipeViewModel) {
+        navigator.navigateToRecipeDetail(with: recipe)
+    }
+    
 }
 
 extension RecipesListPresenter: RecipesListBusinessPresenter {
