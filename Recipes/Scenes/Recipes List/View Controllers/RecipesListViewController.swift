@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RecipesUIKit
 
 class RecipesListViewController: UIViewController {
     
@@ -44,7 +45,7 @@ class RecipesListViewController: UIViewController {
     
     private func setupCollectionView() {
         view.addSubview(collectionView)
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = Colors.background
         collectionView.keyboardDismissMode = .onDrag
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -65,7 +66,7 @@ class RecipesListViewController: UIViewController {
         navigationItem.searchController = searchController
         
         searchController.searchBar.delegate = self
-        searchController.searchBar.tintColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+        searchController.searchBar.tintColor = Colors.primary
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search anything, find everything..."
     }

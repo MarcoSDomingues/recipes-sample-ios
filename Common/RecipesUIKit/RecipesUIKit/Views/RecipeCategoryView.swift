@@ -26,7 +26,7 @@ open class RecipeCategoryView: UIView {
     
     internal lazy var titleLabel: UILabel = {
         let lbl = UILabel()
-        lbl.textColor = .white
+        lbl.textColor = Colors.white
         lbl.textAlignment = .center
         lbl.font = .systemFont(ofSize: 14)
         return lbl
@@ -47,7 +47,7 @@ open class RecipeCategoryView: UIView {
     private func commonInit() {
         addSubview(titleLabel)
         
-        backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        backgroundColor = Colors.grey
         setupConstraints()
     }
     

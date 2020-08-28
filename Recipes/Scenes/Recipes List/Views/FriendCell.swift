@@ -55,14 +55,14 @@ class FriendCell: UICollectionViewCell {
     
     lazy var nameLabel: UILabel = {
         let lbl = UILabel()
-        lbl.textColor = .black
+        lbl.textColor = Colors.text
         lbl.font = .boldSystemFont(ofSize: 14)
         return lbl
     }()
     
     lazy var infoLabel: UILabel = {
         let lbl = UILabel()
-        lbl.textColor = .black
+        lbl.textColor = Colors.text
         lbl.font = .systemFont(ofSize: 14)
         return lbl
     }()

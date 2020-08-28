@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RecipesUIKit
 
 class BaseNavigationController: UINavigationController {
     
@@ -24,13 +25,13 @@ class BaseNavigationController: UINavigationController {
     private func setupNavigationBarAppearance() {
         navigationBar.prefersLargeTitles = false
         
-        navigationBar.tintColor = .white
+        navigationBar.tintColor = Colors.white
         navigationBar.shadowImage = UIImage()
-        navigationBar.barTintColor = .white
+        navigationBar.barTintColor = Colors.background
         
         navigationBar.titleTextAttributes = [
             .font: UIFont.boldSystemFont(ofSize: 16),
-            .foregroundColor: #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+            .foregroundColor: Colors.primary
         ]
     }
     

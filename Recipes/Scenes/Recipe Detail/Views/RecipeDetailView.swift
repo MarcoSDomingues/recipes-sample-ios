@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RecipesUIKit
 
 class RecipeDetailView: UIView {
     
@@ -50,7 +51,7 @@ class RecipeDetailView: UIView {
         let lbl = UILabel()
         lbl.numberOfLines = 2
         lbl.font = .boldSystemFont(ofSize: 28)
-        lbl.textColor = .white
+        lbl.textColor = Colors.white
         return lbl
     }()
     
@@ -58,7 +59,7 @@ class RecipeDetailView: UIView {
         let lbl = UILabel()
         lbl.numberOfLines = 0
         lbl.font = .boldSystemFont(ofSize: 14)
-        lbl.textColor = .white
+        lbl.textColor = Colors.white
         return lbl
     }()
     
@@ -132,7 +133,7 @@ class RecipeDetailView: UIView {
     private func instructionLabel(with instruction: String) -> UILabel {
         let lbl = UILabel()
         lbl.text = instruction
-        lbl.textColor = .white
+        lbl.textColor = Colors.white
         lbl.numberOfLines = 0
         lbl.font = .boldSystemFont(ofSize: 14)
         return lbl

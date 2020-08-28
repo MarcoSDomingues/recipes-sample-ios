@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RecipesUIKit
 
 class RecipeCardCell: UICollectionViewCell {
     
@@ -51,7 +52,7 @@ class RecipeCardCell: UICollectionViewCell {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
-        iv.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        iv.backgroundColor = Colors.grey
         return iv
     }()
     
@@ -65,7 +66,7 @@ class RecipeCardCell: UICollectionViewCell {
         let lbl = UILabel()
         lbl.numberOfLines = 2
         lbl.font = .boldSystemFont(ofSize: 28)
-        lbl.textColor = .white
+        lbl.textColor = Colors.white
         return lbl
     }()
     

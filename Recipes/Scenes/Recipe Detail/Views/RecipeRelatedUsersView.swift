@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RecipesUIKit
 
 class RecipeRelatedUsersView: UIView {
     
@@ -41,7 +42,7 @@ class RecipeRelatedUsersView: UIView {
         let lbl = UILabel()
         lbl.text = "These users also cooked this dish"
         lbl.font = .systemFont(ofSize: 14)
-        lbl.textColor = .white
+        lbl.textColor = Colors.white
         return lbl
     }()
     
