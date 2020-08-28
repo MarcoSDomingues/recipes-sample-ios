@@ -37,6 +37,7 @@ final class RecipesListManager: ListContentManager {
     
     private var recipesSection: RecipesSectionManager
     private var loadingSection: LoadingSectionManager
+    private var separatorSection: SeparatorSectionManager
     
     // MARK: - Initialization
     
@@ -45,10 +46,11 @@ final class RecipesListManager: ListContentManager {
         
         loadingSection = LoadingSectionManager()
         recipesSection = RecipesSectionManager()
+        separatorSection = SeparatorSectionManager()
         
         super.init()
         
-        sections = [recipesSection, loadingSection]
+        sections = [separatorSection, recipesSection, loadingSection]
         
         recipesSection.onSelectionActionBlock = { [weak self] in
             guard let `self` = self else { return }

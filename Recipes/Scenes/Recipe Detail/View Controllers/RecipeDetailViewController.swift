@@ -162,10 +162,10 @@ extension RecipeDetailViewController: RecipeDetailUserInterface {
     // MARK: - RecipeDetailUserInterface
     
     func updateView(with recipe: RecipeViewModel) {
-        imageView.image = UIImage(named: recipe.imageName)
         detailView.model = recipe
         usersView.model = recipe
         usersView.isHidden = recipe.users.isEmpty
+        imageView.image = UIImage(named: recipe.imageName)
     }
     
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A968564924F8FC0200130057 /* SeparatorSectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968564824F8FC0200130057 /* SeparatorSectionManager.swift */; };
+		A968564B24F8FC4500130057 /* SeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968564A24F8FC4500130057 /* SeparatorCell.swift */; };
 		A99A688424F712D100AE6FD0 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A688324F712D100AE6FD0 /* RecipeDetail.swift */; };
 		A99A688724F7152000AE6FD0 /* RecipeDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A688624F7152000AE6FD0 /* RecipeDetailBuilder.swift */; };
 		A99A688A24F7154700AE6FD0 /* RecipeDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A688924F7154700AE6FD0 /* RecipeDetailRouter.swift */; };
@@ -58,6 +60,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A968564824F8FC0200130057 /* SeparatorSectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorSectionManager.swift; sourceTree = "<group>"; };
+		A968564A24F8FC4500130057 /* SeparatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorCell.swift; sourceTree = "<group>"; };
 		A99A688324F712D100AE6FD0 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		A99A688624F7152000AE6FD0 /* RecipeDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailBuilder.swift; sourceTree = "<group>"; };
 		A99A688924F7154700AE6FD0 /* RecipeDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailRouter.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 				A99A68C824F73ABD00AE6FD0 /* RecipeCardCell.swift */,
 				A99A68CC24F7BA7600AE6FD0 /* LoadingIndicatorCell.swift */,
 				A99A68CE24F7CA7C00AE6FD0 /* RecipeCategoryCell.swift */,
+				A968564A24F8FC4500130057 /* SeparatorCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 			children = (
 				A99A68C624F73A3600AE6FD0 /* RecipesSectionManager.swift */,
 				A99A68CA24F7BA5600AE6FD0 /* LoadingSectionManager.swift */,
+				A968564824F8FC0200130057 /* SeparatorSectionManager.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -429,8 +435,10 @@
 				A99A68C724F73A3600AE6FD0 /* RecipesSectionManager.swift in Sources */,
 				A9DB695C24F6F9F80027C560 /* RecipesListViewController.swift in Sources */,
 				A99A68CF24F7CA7C00AE6FD0 /* RecipeCategoryCell.swift in Sources */,
+				A968564924F8FC0200130057 /* SeparatorSectionManager.swift in Sources */,
 				A9DB696224F6FF5A0027C560 /* RecipesListPresenter.swift in Sources */,
 				A9DB696424F6FFFB0027C560 /* RecipesListInteractor.swift in Sources */,
+				A968564B24F8FC4500130057 /* SeparatorCell.swift in Sources */,
 				A99A68D924F7EBBE00AE6FD0 /* RecipeDetailView.swift in Sources */,
 				A99A68CD24F7BA7600AE6FD0 /* LoadingIndicatorCell.swift in Sources */,
 				A99A68BE24F7359300AE6FD0 /* RecipeViewModel.swift in Sources */,
