@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A968565724F9081600130057 /* InviteFriendButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968565624F9081600130057 /* InviteFriendButton.swift */; };
+		A968565924F9086A00130057 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A968565824F9086A00130057 /* Icons.xcassets */; };
+		A968565B24F90AF000130057 /* Framework+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968565A24F90AF000130057 /* Framework+Bundle.swift */; };
+		A968565D24F90B3E00130057 /* UIButton+ImageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968565C24F90B3E00130057 /* UIButton+ImageColor.swift */; };
 		A99A68AD24F730D900AE6FD0 /* ListContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68AA24F730D900AE6FD0 /* ListContentManager.swift */; };
 		A99A68AE24F730D900AE6FD0 /* ListContentContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68AB24F730D900AE6FD0 /* ListContentContext.swift */; };
 		A99A68AF24F730D900AE6FD0 /* ListSectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68AC24F730D900AE6FD0 /* ListSectionManager.swift */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A968565624F9081600130057 /* InviteFriendButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendButton.swift; sourceTree = "<group>"; };
+		A968565824F9086A00130057 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		A968565A24F90AF000130057 /* Framework+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Framework+Bundle.swift"; sourceTree = "<group>"; };
+		A968565C24F90B3E00130057 /* UIButton+ImageColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+ImageColor.swift"; sourceTree = "<group>"; };
 		A99A68AA24F730D900AE6FD0 /* ListContentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListContentManager.swift; sourceTree = "<group>"; };
 		A99A68AB24F730D900AE6FD0 /* ListContentContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListContentContext.swift; sourceTree = "<group>"; };
 		A99A68AC24F730D900AE6FD0 /* ListSectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSectionManager.swift; sourceTree = "<group>"; };
@@ -59,6 +67,8 @@
 				A99A68B124F7316200AE6FD0 /* UICollectionViewCell+ReuseIdentifier.swift */,
 				A99A68D324F7CE2800AE6FD0 /* UIColor+HexString.swift */,
 				A99A68E324F7F86300AE6FD0 /* UIView+Rounded.swift */,
+				A968565A24F90AF000130057 /* Framework+Bundle.swift */,
+				A968565C24F90B3E00130057 /* UIButton+ImageColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -68,6 +78,7 @@
 			children = (
 				A99A68D124F7CB1200AE6FD0 /* RecipeCategoryView.swift */,
 				A99A68D524F7E6DD00AE6FD0 /* CTAButton.swift */,
+				A968565624F9081600130057 /* InviteFriendButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -103,6 +114,7 @@
 		A9DB694D24F6F4130027C560 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A968565824F9086A00130057 /* Icons.xcassets */,
 				A9DB692B24F6F16A0027C560 /* Info.plist */,
 			);
 			path = Resources;
@@ -177,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A968565924F9086A00130057 /* Icons.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,13 +200,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A968565B24F90AF000130057 /* Framework+Bundle.swift in Sources */,
 				A99A68D424F7CE2800AE6FD0 /* UIColor+HexString.swift in Sources */,
 				A99A68B224F7316200AE6FD0 /* UICollectionViewCell+ReuseIdentifier.swift in Sources */,
 				A99A68D224F7CB1200AE6FD0 /* RecipeCategoryView.swift in Sources */,
 				A99A68AD24F730D900AE6FD0 /* ListContentManager.swift in Sources */,
 				A99A68E424F7F86300AE6FD0 /* UIView+Rounded.swift in Sources */,
 				A99A68D624F7E6DD00AE6FD0 /* CTAButton.swift in Sources */,
+				A968565D24F90B3E00130057 /* UIButton+ImageColor.swift in Sources */,
 				A99A68AF24F730D900AE6FD0 /* ListSectionManager.swift in Sources */,
+				A968565724F9081600130057 /* InviteFriendButton.swift in Sources */,
 				A99A68AE24F730D900AE6FD0 /* ListContentContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

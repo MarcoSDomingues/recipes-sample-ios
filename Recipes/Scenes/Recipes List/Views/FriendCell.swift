@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import RecipesUIKit
 
 class FriendCell: UICollectionViewCell {
     
     enum Constants {
         static let spacing: CGFloat = 10.0
         static let categoriesHeight: CGFloat = 30.0
-        static let margins = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        static let addFriendButtonWidth: CGFloat = 40.0
     }
     
     // MARK: - Properties
@@ -66,6 +67,8 @@ class FriendCell: UICollectionViewCell {
         return lbl
     }()
     
+    lazy var addFriendButton = InviteFriendButton()
+    
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -93,6 +96,7 @@ class FriendCell: UICollectionViewCell {
         infoStackView.addArrangedSubview(imageView)
         infoStackView.addArrangedSubview(nameLabel)
         infoStackView.addArrangedSubview(infoLabel)
+        infoStackView.addArrangedSubview(addFriendButton)
         
         setupCollectionView()
         setupConstraints()
@@ -107,6 +111,9 @@ class FriendCell: UICollectionViewCell {
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
+        
+        let buttonWidth = Constants.addFriendButtonWidth
+        addFriendButton.widthAnchor.constraint(equalToConstant: buttonWidth).isActive = true
         
         imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor).isActive = true
         
