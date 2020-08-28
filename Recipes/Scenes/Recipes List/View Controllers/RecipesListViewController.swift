@@ -97,7 +97,7 @@ extension RecipesListViewController: RecipesListUserInterface {
 extension RecipesListViewController: RecipesListManagerDelegate {
     
     func recipesListManager(_ listManager: RecipesListManager, didSelect recipe: RecipeViewModel) {
-        searchController.dismiss(animated: true)
+        searchController.dismiss(animated: false)
         eventHandler.viewDidSelectRecipe(recipe)
     }
     
