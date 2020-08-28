@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A968564D24F8FDCE00130057 /* FriendsRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968564C24F8FDCE00130057 /* FriendsRepositoryType.swift */; };
 		A99A68A624F72B0400AE6FD0 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68A524F72B0400AE6FD0 /* Recipe.swift */; };
 		A99A68A824F72B4800AE6FD0 /* RecipeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68A724F72B4800AE6FD0 /* RecipeCategory.swift */; };
 		A99A68B524F7339400AE6FD0 /* RecipesRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68B424F7339400AE6FD0 /* RecipesRepositoryType.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A968564C24F8FDCE00130057 /* FriendsRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRepositoryType.swift; sourceTree = "<group>"; };
 		A99A68A524F72B0400AE6FD0 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		A99A68A724F72B4800AE6FD0 /* RecipeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategory.swift; sourceTree = "<group>"; };
 		A99A68B424F7339400AE6FD0 /* RecipesRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesRepositoryType.swift; sourceTree = "<group>"; };
@@ -39,6 +41,7 @@
 			isa = PBXGroup;
 			children = (
 				A99A68B424F7339400AE6FD0 /* RecipesRepositoryType.swift */,
+				A968564C24F8FDCE00130057 /* FriendsRepositoryType.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A99A68DC24F7F3AA00AE6FD0 /* User.swift in Sources */,
+				A968564D24F8FDCE00130057 /* FriendsRepositoryType.swift in Sources */,
 				A99A68A624F72B0400AE6FD0 /* Recipe.swift in Sources */,
 				A99A68B524F7339400AE6FD0 /* RecipesRepositoryType.swift in Sources */,
 				A99A68A824F72B4800AE6FD0 /* RecipeCategory.swift in Sources */,

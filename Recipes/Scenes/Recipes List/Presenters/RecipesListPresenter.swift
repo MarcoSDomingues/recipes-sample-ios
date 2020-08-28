@@ -24,6 +24,8 @@ extension RecipesListPresenter: RecipesListEventHandler {
     func viewIsReady() {
         userInterface.updateNavigationBarTitle("DISCOVERY")
         
+        businessInteractor.fetchFriends()
+        
         userInterface.isLoading(true)
         businessInteractor.fetchRecipes()
     }
@@ -37,6 +39,15 @@ extension RecipesListPresenter: RecipesListEventHandler {
 extension RecipesListPresenter: RecipesListBusinessPresenter {
     
     // MARK: - RecipesListBusinessPresenter
+    
+    func didFetchFriends(_ friends: [User]) {
+        let friends = friends.map { UserViewModel(user: $0) }
+        userInterface.updateFriends(friends)
+    }
+    
+    func didFailToFetchFriends(with error: Error) {
+        navigator.showError(error)
+    }
     
     func didFetchRecipes(_ recipes: [Recipe]) {
         userInterface.isLoading(false)

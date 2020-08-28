@@ -87,6 +87,10 @@ extension RecipesListViewController: RecipesListUserInterface {
         contentManager?.recipes = recipes
     }
     
+    func updateFriends(_ friends: [UserViewModel]) {
+        contentManager?.friends = friends
+    }
+    
 }
 
 extension RecipesListViewController: RecipesListManagerDelegate {

@@ -11,10 +11,13 @@ import RecipesDomain
 
 class RecipesListBuilder {
     
-    let repository: RecipesRepositoryType
+    let recipesRepository: RecipesRepositoryType
+    let friendsRepository: FriendsRepositoryType
     
-    init(repository: RecipesRepositoryType = RecipesRepository()) {
-        self.repository = repository
+    init(recipesRepository: RecipesRepositoryType = RecipesRepository(),
+         friendsRepository: FriendsRepositoryType = FriendsRepository()) {
+        self.recipesRepository = recipesRepository
+        self.friendsRepository = friendsRepository
     }
     
     func makeModule(with window: UIWindow?, navigationController: UINavigationController? = nil) -> RecipesListRouter {
@@ -40,7 +43,8 @@ class RecipesListBuilder {
     }
     
     private func makeInteractor() -> RecipesListInteractor {
-        RecipesListInteractor(repository: repository)
+        RecipesListInteractor(recipesRepository: recipesRepository,
+                              friendsRepository: friendsRepository)
     }
     
     private func makePresenter() -> RecipesListPresenter {

@@ -1,27 +1,24 @@
 //
-//  RecipesSectionManager.swift
+//  FriendsSectionManager.swift
 //  Recipes
 //
-//  Created by Marco Domingues on 27/08/2020.
+//  Created by Marco Domingues on 28/08/2020.
 //  Copyright © 2020 Marco Domingues. All rights reserved.
 //
 
 import UIKit
 import RecipesUIKit
 
-final class RecipesSectionManager: ListSectionManager {    
+final class FriendsSectionManager: ListSectionManager {
     
     enum Constants {
-        static let height: CGFloat = 200
+        static let height: CGFloat = 60
         static let insets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     }
     
     // MARK: - Properties
     
-    typealias SelectionActionBlock = (RecipeViewModel) -> Void
-    var onSelectionActionBlock: SelectionActionBlock?
-    
-    var recipes: [RecipeViewModel] = [] {
+    var friends: [UserViewModel] = [] {
         didSet {
             contentContext.reload()
         }
@@ -39,7 +36,7 @@ final class RecipesSectionManager: ListSectionManager {
     var contentContext: ListContentContext<ListContentManager>!
     
     func registerReuseIdentifiers(in collectionView: UICollectionView) {
-        RecipeCardCell.register(in: collectionView)
+        FriendCell.register(in: collectionView)
     }
     
     func sectionInset() -> UIEdgeInsets {
@@ -47,7 +44,7 @@ final class RecipesSectionManager: ListSectionManager {
     }
     
     func numberOfItems() -> Int {
-        return recipes.count
+        return friends.count
     }
     
     func sizeForItemAt(_ index: Int) -> CGSize {
@@ -58,17 +55,13 @@ final class RecipesSectionManager: ListSectionManager {
     }
     
     func cellForItemAt(_ index: Int) -> UICollectionViewCell {
-        let cell = contentContext.dequeueReusableCell(for: index) as RecipeCardCell
-        cell.model = recipes[index]
+        let cell = contentContext.dequeueReusableCell(for: index) as FriendCell
+        cell.model = friends[index]
         return cell
     }
     
     func shouldSelectItemAt(_ index: Int) -> Bool {
-        return true
-    }
-    
-    func didSelectItemAt(_ index: Int) {
-        onSelectionActionBlock?(recipes[index])
+        return false
     }
     
 }
