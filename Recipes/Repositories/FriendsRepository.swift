@@ -15,7 +15,11 @@ final class FriendsRepository: FriendsRepositoryType {
     
     init() {
         self.friends = [
-            User(name: "Cristina", info: "Loves screaming", imageName: "cristina-photo", categories: [RecipeCategory(title: "DESSERTS", hexColor: "#FF6379")])
+            User(name: "Cristina", info: "Loves screaming", imageName: "cristina-photo", categories: [
+                RecipeCategory(title: "DINNER", hexColor: "#FA8E5F"),
+                RecipeCategory(title: "DESSERTS", hexColor: "#FF6379"),
+                RecipeCategory(title: "CHOCOLATE", hexColor: "#FE3D38")
+            ])
         ]
     }
     

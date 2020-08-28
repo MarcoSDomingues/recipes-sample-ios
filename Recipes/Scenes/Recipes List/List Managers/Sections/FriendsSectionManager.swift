@@ -12,7 +12,7 @@ import RecipesUIKit
 final class FriendsSectionManager: ListSectionManager {
     
     enum Constants {
-        static let height: CGFloat = 60
+        static let height: CGFloat = 70
         static let insets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     }
     

@@ -28,6 +28,14 @@ class FriendCell: UICollectionViewCell {
     
     // MARK: -
     
+    lazy var infoStackView: UIStackView = {
+        let sv = UIStackView()
+        sv.axis = .horizontal
+        sv.spacing = Constants.spacing
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        return sv
+    }()
+    
     lazy var stackView: UIStackView = {
         let sv = UIStackView()
         sv.axis = .vertical
@@ -35,6 +43,27 @@ class FriendCell: UICollectionViewCell {
         sv.isLayoutMarginsRelativeArrangement = true
         sv.translatesAutoresizingMaskIntoConstraints = false
         return sv
+    }()
+    
+    lazy var imageView: UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFill
+        iv.clipsToBounds = true
+        return iv
+    }()
+    
+    lazy var nameLabel: UILabel = {
+        let lbl = UILabel()
+        lbl.textColor = .black
+        lbl.font = .boldSystemFont(ofSize: 14)
+        return lbl
+    }()
+    
+    lazy var infoLabel: UILabel = {
+        let lbl = UILabel()
+        lbl.textColor = .black
+        lbl.font = .systemFont(ofSize: 14)
+        return lbl
     }()
     
     lazy var collectionView: UICollectionView = {
@@ -58,8 +87,12 @@ class FriendCell: UICollectionViewCell {
     
     private func commonInit() {
         addSubview(stackView)
-        stackView.addArrangedSubview(UIView())
+        stackView.addArrangedSubview(infoStackView)
         stackView.addArrangedSubview(collectionView)
+        
+        infoStackView.addArrangedSubview(imageView)
+        infoStackView.addArrangedSubview(nameLabel)
+        infoStackView.addArrangedSubview(infoLabel)
         
         setupCollectionView()
         setupConstraints()
@@ -75,8 +108,15 @@ class FriendCell: UICollectionViewCell {
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
         
+        imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor).isActive = true
+        
         let height = Constants.categoriesHeight
         collectionView.heightAnchor.constraint(equalToConstant: height).isActive = true
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        imageView.setRounded()
     }
     
     // MARK: - Setup
@@ -94,6 +134,10 @@ class FriendCell: UICollectionViewCell {
     // MARK: - Bindings
     
     private func bindViewModel(_ viewModel: UserViewModel) {
+        nameLabel.text = viewModel.name
+        infoLabel.text = viewModel.info
+        imageView.image = UIImage(named: viewModel.imageName)
+        
         collectionView.reloadData()
     }
     
