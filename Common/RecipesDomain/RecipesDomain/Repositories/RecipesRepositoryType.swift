@@ -10,4 +10,5 @@ import Foundation
 
 public protocol RecipesRepositoryType {
     func fetchRecipes(_ completion: @escaping (Result<[Recipe], Error>) -> Void)
+    func fetchRecipes(for query: String, completion: @escaping (Result<[Recipe], Error>) -> Void)
 }

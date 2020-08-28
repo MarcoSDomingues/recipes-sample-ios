@@ -64,6 +64,7 @@ class RecipesListViewController: UIViewController {
     private func setupSearchController() {
         navigationItem.searchController = searchController
         
+        searchController.searchBar.delegate = self
         searchController.searchBar.tintColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search anything, find everything..."
@@ -96,7 +97,16 @@ extension RecipesListViewController: RecipesListUserInterface {
 extension RecipesListViewController: RecipesListManagerDelegate {
     
     func recipesListManager(_ listManager: RecipesListManager, didSelect recipe: RecipeViewModel) {
+        searchController.dismiss(animated: true)
         eventHandler.viewDidSelectRecipe(recipe)
+    }
+    
+}
+
+extension RecipesListViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        eventHandler.searchBarTextDidChange(with: searchText)
     }
     
 }

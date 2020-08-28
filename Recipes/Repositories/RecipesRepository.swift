@@ -73,4 +73,14 @@ final class RecipesRepository: RecipesRepositoryType {
         completion(.success(recipes))
     }
     
+    func fetchRecipes(for query: String, completion: @escaping (Result<[Recipe], Error>) -> Void) {
+        if query.isEmpty {
+            completion(.success(recipes))
+            return
+        }
+        
+        let filtered = recipes.filter { $0.title.contains(query) }
+        completion(.success(filtered))
+    }
+    
 }

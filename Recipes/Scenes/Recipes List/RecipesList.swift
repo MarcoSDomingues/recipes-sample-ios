@@ -33,6 +33,7 @@ protocol RecipesListUserInterface: class {
 
 protocol RecipesListEventHandler: class {
     func viewIsReady()
+    func searchBarTextDidChange(with text: String)
     func viewDidSelectRecipe(_ recipe: RecipeViewModel)
 }
 
@@ -41,6 +42,7 @@ protocol RecipesListEventHandler: class {
 protocol RecipesListBusinessInteractor: class {
     func fetchRecipes()
     func fetchFriends()
+    func fetchRecipes(for query: String)
 }
 
 protocol RecipesListBusinessPresenter: class {

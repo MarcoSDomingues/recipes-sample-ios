@@ -34,6 +34,10 @@ extension RecipesListPresenter: RecipesListEventHandler {
         navigator.navigateToRecipeDetail(with: recipe)
     }
     
+    func searchBarTextDidChange(with text: String) {
+        businessInteractor.fetchRecipes(for: text)
+    }
+    
 }
 
 extension RecipesListPresenter: RecipesListBusinessPresenter {

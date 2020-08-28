@@ -38,6 +38,17 @@ extension RecipesListInteractor: RecipesListBusinessInteractor {
         }
     }
     
+    func fetchRecipes(for query: String) {
+        recipesRepository.fetchRecipes(for: query) { [weak self] result in
+            switch result {
+            case .success(let recipes):
+                self?.businessPresenter.didFetchRecipes(recipes)
+            case .failure(let error):
+                self?.businessPresenter.didFailToFetchRecipes(with: error)
+            }
+        }
+    }
+    
     func fetchFriends() {
         friendsRepository.fetchFriends { [weak self] result in
             switch result {
