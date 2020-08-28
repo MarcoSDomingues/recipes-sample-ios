@@ -253,8 +253,8 @@
 		A9DA8B8E24F6EDA90077390A /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
-				A99A68B724F7343400AE6FD0 /* Repositories */,
 				A9DB695224F6F8450027C560 /* Application */,
+				A99A68B724F7343400AE6FD0 /* Repositories */,
 				A99A689424F725B800AE6FD0 /* Utilities */,
 				A9DB695324F6F84E0027C560 /* Scenes */,
 				A9DA8BA324F6EEBB0077390A /* Resources */,
