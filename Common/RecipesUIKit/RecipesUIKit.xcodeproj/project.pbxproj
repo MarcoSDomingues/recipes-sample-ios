@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A959E2EA2706614100109615 /* CTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A959E2E92706614100109615 /* CTAButton.swift */; };
 		A968565724F9081600130057 /* InviteFriendButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968565624F9081600130057 /* InviteFriendButton.swift */; };
 		A968565924F9086A00130057 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A968565824F9086A00130057 /* Icons.xcassets */; };
 		A968565B24F90AF000130057 /* Framework+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968565A24F90AF000130057 /* Framework+Bundle.swift */; };
@@ -19,12 +20,12 @@
 		A99A68B224F7316200AE6FD0 /* UICollectionViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68B124F7316200AE6FD0 /* UICollectionViewCell+ReuseIdentifier.swift */; };
 		A99A68D224F7CB1200AE6FD0 /* RecipeCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68D124F7CB1200AE6FD0 /* RecipeCategoryView.swift */; };
 		A99A68D424F7CE2800AE6FD0 /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68D324F7CE2800AE6FD0 /* UIColor+HexString.swift */; };
-		A99A68D624F7E6DD00AE6FD0 /* CTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68D524F7E6DD00AE6FD0 /* CTAButton.swift */; };
 		A99A68E424F7F86300AE6FD0 /* UIView+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A68E324F7F86300AE6FD0 /* UIView+Rounded.swift */; };
 		A9DB692C24F6F16A0027C560 /* RecipesUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A9DB692A24F6F16A0027C560 /* RecipesUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A959E2E92706614100109615 /* CTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButton.swift; sourceTree = "<group>"; };
 		A968565624F9081600130057 /* InviteFriendButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendButton.swift; sourceTree = "<group>"; };
 		A968565824F9086A00130057 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		A968565A24F90AF000130057 /* Framework+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Framework+Bundle.swift"; sourceTree = "<group>"; };
@@ -37,7 +38,6 @@
 		A99A68B124F7316200AE6FD0 /* UICollectionViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
 		A99A68D124F7CB1200AE6FD0 /* RecipeCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoryView.swift; sourceTree = "<group>"; };
 		A99A68D324F7CE2800AE6FD0 /* UIColor+HexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexString.swift"; sourceTree = "<group>"; };
-		A99A68D524F7E6DD00AE6FD0 /* CTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CTAButton.swift; path = ../../../../../../CTAButton.swift; sourceTree = "<group>"; };
 		A99A68E324F7F86300AE6FD0 /* UIView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rounded.swift"; sourceTree = "<group>"; };
 		A9DB692724F6F16A0027C560 /* RecipesUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecipesUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DB692A24F6F16A0027C560 /* RecipesUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecipesUIKit.h; sourceTree = "<group>"; };
@@ -89,8 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				A99A68D124F7CB1200AE6FD0 /* RecipeCategoryView.swift */,
-				A99A68D524F7E6DD00AE6FD0 /* CTAButton.swift */,
 				A968565624F9081600130057 /* InviteFriendButton.swift */,
+				A959E2E92706614100109615 /* CTAButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,12 +217,12 @@
 			files = (
 				A968565B24F90AF000130057 /* Framework+Bundle.swift in Sources */,
 				A968566524F9143C00130057 /* Colors.swift in Sources */,
+				A959E2EA2706614100109615 /* CTAButton.swift in Sources */,
 				A99A68D424F7CE2800AE6FD0 /* UIColor+HexString.swift in Sources */,
 				A99A68B224F7316200AE6FD0 /* UICollectionViewCell+ReuseIdentifier.swift in Sources */,
 				A99A68D224F7CB1200AE6FD0 /* RecipeCategoryView.swift in Sources */,
 				A99A68AD24F730D900AE6FD0 /* ListContentManager.swift in Sources */,
 				A99A68E424F7F86300AE6FD0 /* UIView+Rounded.swift in Sources */,
-				A99A68D624F7E6DD00AE6FD0 /* CTAButton.swift in Sources */,
 				A968565D24F90B3E00130057 /* UIButton+ImageColor.swift in Sources */,
 				A99A68AF24F730D900AE6FD0 /* ListSectionManager.swift in Sources */,
 				A968565724F9081600130057 /* InviteFriendButton.swift in Sources */,
